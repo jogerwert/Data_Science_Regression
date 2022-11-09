@@ -1,9 +1,7 @@
 import numpy as np
-import pandas as pd
 
 
 def berechne_parameter(X, y):
-
     # w = (X^T * X)^-1 * X^T * y
     return np.matmul(np.matmul(np.linalg.inv((np.matmul(np.transpose(X), X))), np.transpose(X)), y)
 
